@@ -14,7 +14,6 @@ namespace TestApi.Controllers
         public usersController(ApplicationDbContext _dbContext)
         {
             __dbContext = _dbContext;
-            //HELLO SUMAN MITRA
         }
         [HttpGet]
         public async Task<ActionResult<IEnumerable<AppUser>>> GetUsers()
