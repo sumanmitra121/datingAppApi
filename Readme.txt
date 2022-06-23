@@ -16,5 +16,5 @@ and password from credential Manager
      1st way: git checkout <branchname>
      2nd way: click on git icon (bottom-left corner) , then enter the branchname  on which you want to switch.
  6.if you want to push your project from branch to branch: git push -u origin <branch-name>
+ 7.To merge  brancg with main : switch to main ; then git merge <branch-name>;
  -----------------------------------------------------------------------------------------------------------------------------------------
- 
