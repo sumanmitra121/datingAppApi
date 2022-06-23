@@ -18,3 +18,47 @@ and password from credential Manager
  6.if you want to push your project from branch to branch: git push -u origin <branch-name>
  7.To merge  brancg with main : switch to main ; then git merge <branch-name>;
  -----------------------------------------------------------------------------------------------------------------------------------------
+	
+Configure IIS In Windows 10 Operating System
+
+In my case, I am using Windows 10 Enterprise edition.
+ 
+Now open the browser and just type the url http://localhost/.
+On pressing Enter, it will throw page not found error.
+ 
+Now I am going to search for the IIS manager.
+ 
+Not found!
+ 
+Open Control Panel.
+
+Click Programs.
+
+Under Programs and Features, click Turn Windows features on or off.
+
+A new popup will appear.
+
+Just check the Internet Information Services and its related features.
+ 
+Under Internet Information Services check the following folders:
+FTP Server
+Web Management Tools
+World wide web services
+Application development features
+Common HTTP Feature
+Health and Diagnostics
+Performance Feature
+Security
+
+Then click OK to complete the installation of new features.
+Click Restart now to apply changes to complete the IIS feature installation.
+
+After a successful restart.
+ 
+Now you can see the IIS webserver option on the All Programs menu.
+ 
+Open the browser.
+ 
+Now type url http://localhost.
+
+Internet Information Services (IIS) successfully configured.
