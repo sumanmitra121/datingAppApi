@@ -18,7 +18,7 @@ and password from credential Manager
  6.if you want to push your project from branch to branch: git push -u origin <branch-name>
  7.To merge  brancg with main : switch to main ; then git merge <branch-name>;
  -----------------------------------------------------------------------------------------------------------------------------------------
-	
+                                                CONFIGURE IIS
 Configure IIS In Windows 10 Operating System
 
 In my case, I am using Windows 10 Enterprise edition.
@@ -62,3 +62,5 @@ Open the browser.
 Now type url http://localhost.
 
 Internet Information Services (IIS) successfully configured.
+
+FOR MORE DETAILS CLICK ON THE LINK: https://enterprise.arcgis.com/en/web-adaptor/latest/install/iis/enable-iis-10-components-server.htm	
