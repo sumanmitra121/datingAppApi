@@ -1,14 +1,15 @@
 
-namespace TestApi.Entities
+namespace TestApi.DTOs
 {
-    public class AppUser
+    public class userDto
     {
         public int Id { get; set; }
         public string UserName { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
-        public byte[] passwordhash { get; set; }
-        public byte[] passwordSalt { get; set; }
-        
+
+        public string Token { get; set; }
+
+
     }
 }
