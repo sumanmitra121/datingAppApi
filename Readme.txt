@@ -64,3 +64,16 @@ Now type url http://localhost.
 Internet Information Services (IIS) successfully configured.
 
 FOR MORE DETAILS CLICK ON THE LINK: https://enterprise.arcgis.com/en/web-adaptor/latest/install/iis/enable-iis-10-components-server.htm	
+-----------------------------------------------------------------------------------------------------
+                                          --ABOUT MIGRATIONS--
+In Order to create our database,i install a tool on my machine to help me to do so.
+1. Visit Link --  nuget.org
+2. Serch By keyword called dotnet-ef.
+3. After some results come according to my search ,i click on dotnet-ef
+4. Now copy the command ,dotnet tool install --global dotnet-ef --version 6.0.blah.blah
+5. Then i install another package called Microsoft.EntityFrameworkCore.Design from nuge package manager
+6. Then run the command dotnet ef  migrations add <migrations_name> -o foldername
+7. dotnet ef database update for updating datbase.
+8. add a entity via migrations -- dotnet ef migrations add <entity_name>
+9. To add a entity of a table using Migrations -- add entity into your model then run command dotnet ef migrations add <Name>
+10.To clean a table using migrations -- dotnet ef database drop  

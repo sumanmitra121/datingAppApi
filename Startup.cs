@@ -1,25 +1,23 @@
 
-using Microsoft.EntityFrameworkCore;
-
+using  Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using System.Text;
 namespace TestApi
 {
     public class Startup
     {
-        private IConfiguration _config { get; }
-        public Startup(IConfiguration config) 
+        public Startup(IConfiguration _config) 
         {
-            _config = config;
-
+            this._config = _config;
+   
         }
+         private IConfiguration _config { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //  services.AddDbContextPool<TestApi.DATA.ApplicationDbContext>(options =>
-            // {
-            //      options.UseSqlite(_config.GetConnectionString("DefaultConnection"));
-            // });
             services.AddControllers();
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -32,6 +30,8 @@ namespace TestApi
 
             app.UseHttpsRedirection();
             app.UseRouting();
+            app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4200"));
+            app.UseAuthentication();
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
