@@ -22,7 +22,7 @@ namespace TestApi.Controllers
         }
         [HttpPost("register")]
         public async Task<ActionResult<userDto>> userRegister(registreduser _userDtls){
-                if(await checkExist(_userDtls.UserName)) return BadRequest("Error! UserName is already exist");
+                if(await checkExist(_userDtls.Email)) return BadRequest("Error! Email is already exist, please try with another Email");
                 using var hmac = new HMACSHA512();
                 var user = new AppUser{
                     
@@ -63,8 +63,8 @@ namespace TestApi.Controllers
                     Token = __tknService.CreateToken(_user)
                 };
         }
-        private async Task<bool> checkExist(string username){
-            return await __dbContext.users.AnyAsync(x => x.UserName.ToLower() == username.ToLower());
+        private async Task<bool> checkExist(string email){
+            return await __dbContext.users.AnyAsync(x => x.Email.ToLower() == email.ToLower());
         }
     }
 }

@@ -1,7 +1,5 @@
 
-using  Microsoft.IdentityModel.Tokens;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using System.Text;
+
 namespace TestApi
 {
     public class Startup

@@ -20,6 +20,7 @@ namespace TestApi.DTOs
         public string Phone { get; set; }
 
         [Required]
+        [StringLength(50,MinimumLength = 6)]
         public string password {get;set;}
     }
 }
