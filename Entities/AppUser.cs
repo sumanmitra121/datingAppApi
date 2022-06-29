@@ -27,8 +27,5 @@ namespace TestApi.Entities
         public string country { get; set; }
         public ICollection<photo> photos { get; set; }
 
-        // public int Getage(){
-        //     return dateOfbirth.CalculateAge();
-        // }
     }
 }
