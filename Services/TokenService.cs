@@ -21,7 +21,7 @@ namespace TestApi.Services
         {
             var claims = new List<Claim>{
                 new Claim(JwtRegisteredClaimNames.NameId,_user.Email),
-                // new Claim(JwtRegisteredClaimNames.NameId,_user.UserName)
+                new Claim(JwtRegisteredClaimNames.UniqueName,_user.UserName)
             };
             var creds = new SigningCredentials(_Key,SecurityAlgorithms.HmacSha512Signature);
             var tokenDescriptor = new SecurityTokenDescriptor{

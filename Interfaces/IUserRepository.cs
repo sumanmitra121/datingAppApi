@@ -1,6 +1,7 @@
 
 using TestApi.DTOs;
 using TestApi.Entities;
+using TestApi.Helpers;
 
 namespace TestApi.Interfaces
 {
@@ -13,9 +14,10 @@ namespace TestApi.Interfaces
         Task<AppUser> GetUserByIdAsync(int id);
 
         Task<AppUser> GetUserByNameAsync(string username);
-
+         Task<AppUser> GetUserByEmailAsync(string email);
          Task<MemeberDto> GetMemberAsync(string username);
-          Task<IEnumerable<MemeberDto>> GetMembersAsync();
+          Task<Pagedlist<MemeberDto>> GetMembersAsync(userParams userParams);
+    
 
     }
 }

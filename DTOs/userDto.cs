@@ -10,6 +10,11 @@ namespace TestApi.DTOs
 
         public string Token { get; set; }
 
+        public string url { get; set; }
+        public string KnwonAs { get; set; }
+
+        public string gender {get; set;}
+
 
     }
 }

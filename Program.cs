@@ -13,9 +13,13 @@ internal class Program
     {
         var builder = WebApplication.CreateBuilder(args);
         // Add services to the container.
+        builder.Services.Configure<cloudinarySetting>(builder.Configuration.GetSection("CloudinarySettings"));
+
         builder.Services.AddControllers();
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddScoped<ITokenService, TokenService>();
+        builder.Services.AddScoped<IPhotoService, photoService>();
+        builder.Services.AddScoped<loggedUserActivity>();
          builder.Services.AddScoped<IUserRepository, UserRepository>();
          builder.Services.AddAutoMapper(typeof(AutoMapperProfileHelpers).Assembly);
         builder.Services.AddDbContext<TestApi.DATA.ApplicationDbContext>();

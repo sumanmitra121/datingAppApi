@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TestApi.DTOs
 {
-    public class registreduser
+    public class registreduserDTO
     {
         public int Id { get; set; }
 
@@ -22,5 +22,22 @@ namespace TestApi.DTOs
         [Required]
         [StringLength(50,MinimumLength = 6)]
         public string password {get;set;}
+
+        [Required]
+        public string gender {get;set;}
+
+        [Required]
+        public string city {get;set;}
+
+        [Required]
+        public string country {get;set;}
+
+        [Required]
+        public string knownAs {get;set;}
+
+         [Required]
+        public DateTime dateOfbirth {get;set;}
+
+        
     }
 }
